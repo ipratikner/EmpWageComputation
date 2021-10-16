@@ -3,14 +3,24 @@ package com.bridgelabz;
 public class EmployeeWage {
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Employee Wage Program");
+        //calculate daily wages
 
-        //to check is emp present or not
-        int Is_EmpPresent=1;
+        //constants
+        int IS_EMP_PRESENT=1;
+        int EMP_RATE_PER_HOUR =20;
+
+        //Variable
+        int empHrs =0;
+        int empWage =0;
+
+        //computation
         double empCheck = Math.floor(Math.random() * 10 ) % 2 ;
-        if(empCheck == Is_EmpPresent)
-            System.out.println("Employee is Present");
+        if(empCheck == IS_EMP_PRESENT)
+            empHrs =8;
         else
-            System.out.println("Employee is Absent ");
+            empHrs =0;
+        empWage = empHrs *  EMP_RATE_PER_HOUR;
+        System.out.println("Employee Wage is " +empWage );
+
     }
 }
